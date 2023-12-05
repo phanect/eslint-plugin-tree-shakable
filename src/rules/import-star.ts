@@ -8,7 +8,7 @@ const importStarRule: TSESLint.RuleModule<MessageIds> = {
     docs: {
       description:
         "Forbits non-tree-shakable access to module name space objects.",
-      recommended: "error",
+      recommended: "recommended",
     },
     messages: {
       "non-tree-shakable-access":
