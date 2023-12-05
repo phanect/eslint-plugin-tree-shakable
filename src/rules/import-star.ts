@@ -26,6 +26,7 @@ const importStarRule: TSESLint.RuleModule<MessageIds> = {
       },
     };
   },
+  defaultOptions: [],
 };
 
 export default importStarRule;
