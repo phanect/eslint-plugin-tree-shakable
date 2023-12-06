@@ -30,7 +30,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+
       - run: npm ci
+        if: matrix.node-version != 14
+      # npm ci does not work on deprecated Node.js v14 & npm v6. Use npm install as a workaround
+      - run: npm install
+        if: matrix.node-version == 14
+
       - run: npm run build
       - run: npm run typecheck
       - run: npm test
